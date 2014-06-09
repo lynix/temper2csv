@@ -1,0 +1,4 @@
+# allow members of group 'plugdev' r/w access to Temperl sensor
+ATTRS{idVendor}=="0c45", ATTRS{idProduct}=="7401", GROUP="plugdev", MODE="0660"
+
+# vim: ft=udevrules
