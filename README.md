@@ -14,7 +14,9 @@ member of the *plugdev* group.
 
 ## Usage
 To give it a try, just plug in the device and do
-    $ ./temper2csv -v
+```
+$ ./temper2csv -v
+```
 
 This fires up **temper2csv** with some default settings in verbose mode, which
 should give you the current temperature reading within a couple of seconds.
