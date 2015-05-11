@@ -1,7 +1,6 @@
-temper2csv
-==========
+# temper2csv
 
-library and simple logging application for the Temper(l) USB thermo sensor device
+Library and simple logging application for the Temper(l) USB thermo sensor device
 
 
 ## Dependencies
@@ -22,3 +21,8 @@ This fires up **temper2csv** with some default settings in verbose mode, which
 should give you the current temperature reading within a couple of seconds.
 
 For further usage information, please try the `-h` commandline option.
+
+## License
+
+This software is released under the terms of the MIT License, see file
+'LICENSE'.
