@@ -38,6 +38,7 @@ libusb_device_handle *temper_open(char **err)
 	}
 
 	libusb_device *dev = NULL;
+	char found = 0;
 	for (ssize_t i=0; i<num_devs; i++) {
 		dev = dev_list[i];
 		struct libusb_device_descriptor desc;
@@ -47,12 +48,13 @@ libusb_device_handle *temper_open(char **err)
 		}
 		if (desc.idVendor == USB_VID && desc.idProduct == USB_PID) {
 			libusb_ref_device(dev);
+			found = 1;
 			break;
 		}
 	}
 	libusb_free_device_list(dev_list, 1);
 
-	if (dev == NULL) {
+	if (!found) {
 		*err = "no supported device found (or insufficient access rights)";
 		libusb_exit(NULL);
 		return NULL;
