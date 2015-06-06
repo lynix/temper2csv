@@ -217,5 +217,5 @@ void print_help()
 			DEF_INTS);
 	puts  ("  -v        verbose output\n");
 	puts  ("  -h        display this usage information\n");
-	printf("This version of mi3stat was built on %s %s.\n", __DATE__, __TIME__);
+	printf("This version of temper2csv was built on %s %s.\n", __DATE__, __TIME__);
 }
