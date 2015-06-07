@@ -17,7 +17,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 
-#include "libtemper.h"
+#include <libtemper1.h>
 
 #define DEF_OUTF "temperatures.csv"
 #define DEF_INTR 300
@@ -88,7 +88,7 @@ void *record_loop(void *arg)
 
 		time_t t = time(NULL);
 		for (uint16_t i=0; i<opts.num_sample; i++) {
-			samples[i] = temper_read(&err);
+			samples[i] = temper1_read(&err);
 			if (err != NULL)
 				err_exit("failed to retrieve temperature: %s", err);
 			sleep(opts.int_sample);

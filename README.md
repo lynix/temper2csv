@@ -1,11 +1,12 @@
 # temper2csv
 
-Library and simple logging application for the Temper(l) USB thermo sensor device
+Simple logging application for the Temper(1) USB thermo sensor device
 
 [![Build Status](https://travis-ci.org/lynix/temper2csv.svg?branch=master)](https://travis-ci.org/lynix/temper2csv)
 
 
 ## Dependencies
+ * libtemper1 (included as submodule)
  * libusb (v1.0 API)
 
 ## Installation

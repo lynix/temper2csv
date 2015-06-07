@@ -10,14 +10,14 @@ USB_LIBS  = $(shell pkg-config --libs libusb-1.0)
 all: bin/$(PROGN)
 
 
-bin/$(PROGN): obj/libtemper.o obj/main.o
+bin/$(PROGN): obj/main.o libtemper1/lib/libtemper1.a
 	$(CC) $(LDFLAGS) -o $@ $+ $(USB_LIBS)
 	
 obj/main.o: src/main.c
-	$(CC) $(CFLAGS) -DPROGN=\"$(PROGN)\" -c -o $@ $<
+	$(CC) $(CFLAGS) -DPROGN=\"$(PROGN)\" -I libtemper1/include -c -o $@ $<
 
-obj/libtemper.o: src/libtemper.c src/libtemper.h
-	$(CC) $(CFLAGS) $(USB_FLAGS) -c -o $@ $<
+libtemper1/lib/libtemper1.a: libtemper1
+	cd libtemper1 && make
 
 
 clean:

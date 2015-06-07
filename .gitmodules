@@ -1,0 +1,3 @@
+[submodule "libtemper1"]
+	path = libtemper1
+	url = https://github.com/lynix/libtemper1.git
