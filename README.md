@@ -8,7 +8,7 @@ Simple logging application for the Temper(1) USB thermo sensor device
 
 
 ## Dependencies
- * libtemper1 (included as submodule)
+ * [libtemper1](https://github.com/lynix/libtemper1) (included as submodule)
  * libusb (v1.0 API)
 
 ## Installation
