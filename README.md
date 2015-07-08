@@ -4,6 +4,8 @@ Simple logging application for the Temper(1) USB thermo sensor device
 
 [![Build Status](https://travis-ci.org/lynix/temper2csv.svg?branch=master)](https://travis-ci.org/lynix/temper2csv)
 
+![](https://github.com/lynix/temper2csv/blob/master/temper.jpg)
+
 
 ## Dependencies
  * libtemper1 (included as submodule)
